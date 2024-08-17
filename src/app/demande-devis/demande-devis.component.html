@@ -1,0 +1,300 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+            <img class="pt-2" src="assets/unnamed.png" width="25%" [routerLink]="'/'">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link" style="    color: #4bb6cf !important;" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="    color: #4bb6cf !important;" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="    color: #4bb6cf !important;"[routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" style="    color: #4bb6cf !important;"[routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affiche===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{ 'COMPTE' | translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<section style="margin-top: -8rem;" >
+  <div class="container-fluid">
+    <div class="row" style="margin-bottom: -3rem;">
+        <div class="col-md-6 form-section mt-5 pl-5">
+
+         <div class="ml-5 mt-5 ">
+          <h2 style="color:#4bb6cf;"><span style="color: white;">Formulaire de demande de</span> devis</h2>
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="row ">
+              <div class="col-lg-10">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-6 col-form-label">Nom complet</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control " id="nomComplet"  formControlName="nomComplet" >
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="row ">
+              <div class="col-lg-10">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-6 col-form-label">Email</label>
+                  <div class="col-sm-6">
+                    <input type="email" class="form-control " id="email" formControlName="email" >
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="row ">
+                <div class="col-lg-10">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-6 col-form-label">Numéro de téléphone</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control " id="inputEmail3" formControlName="numeroDeTelephone" >
+                    </div>
+                  </div>
+                </div>
+                </div>
+                  <div class="row ">
+              <div class="col-lg-10">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-6 col-form-label">Nom de la société</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control " id="inputEmail3" formControlName="nomDeSociete" >
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row ">
+                <div class="col-lg-10">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-6 col-form-label">Nombre d'employés</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="nombreDEmployes" formControlName="nombreDEmployes">
+                        <option value="1 - 5">1 - 5</option>
+                        <option value="6 - 10">6 - 10</option>
+                        <option value="11 - 50">11 - 50</option>
+                        <option value="51 - 100">51 - 100</option>
+                        <option value="100+">100+</option>
+                    </select>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+              <div class="form-group">
+                  <label for="modules">Modules DUX</label>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" formControlName="gestionCommerciale" id="gestionCommerciale">
+                        <label class="form-check-label" for="gestion_commerciale">Gestion commerciale</label>
+                    </div>
+                    <div class="form-check">
+                        <input d="finances" type="checkbox" formControlName="finances" class="form-check-input" >
+                        <label class="form-check-label" for="finances">Finances et comptabilités</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="pointage" formControlName="pointage">
+                        <label class="form-check-label" for="pointage">Pointage</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="gmao" formControlName="gmao">
+                        <label class="form-check-label" for="gmao">GMAO</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="decisionnel" formControlName="decisionnel">
+                        <label class="form-check-label" for="decisionnel">Décisionnel / BI</label>
+                    </div>
+                    </div>
+                     <div class="col-md-6">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="crm" formControlName="crm">
+                        <label class="form-check-label" for="crm">CRM</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="paie" formControlName="paie">
+                        <label class="form-check-label" for="paie">Paie</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="gpao" formControlName="gpao">
+                        <label class="form-check-label" for="gpao">GPAO</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="immobilisation" formControlName="immobilisation">
+                        <label class="form-check-label" for="immobilisation">Immobilisation</label>
+                    </div>
+                     </div>
+
+                  </div>
+              </div>
+              <div class="row">
+
+              <button type="submit" class="btn btn-primary" style="padding-left: 8rem;padding-right: 8rem;">Envoyer</button>
+
+              </div>
+          </form>
+         </div>
+        </div>
+        <div class="col-md-5 product-description" style="margin-top: 7rem;">
+          <img src="assets/dux-CRM-1.webp" alt="ERP screenshot">
+
+            <h2 style="color: #001b36; font-weight: 600;"><span style="color: #4bb6cf;">L'ERP</span> qui vous permet de piloter votre entreprise, <span  style="color: #4bb6cf;">Où vous soyez !</span></h2>
+            <p class="des">Pour plus d'informations contactez-nous aux numéros suivants:</p>
+            <p class="des" style="color: #4bb6cf;">92 022 808 - 99 982 133</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.ABOUT_TEXT' | translate }}  </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ADDRESS' | translate }}
+          </h6>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SFAX' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_TUNIS' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SOUSSE' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.FEATURES' | translate }}
+          </p>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.MEDIATHEQUE' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.OUR_PACKS' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.CONTACT' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }}</h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">{{ 'FOOTER.NEWSLETTER' | translate }}</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }} </h6>
+          <div class="d-flex ">
+            <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Right -->
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>

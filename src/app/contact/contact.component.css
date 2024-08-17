@@ -1,0 +1,89 @@
+button.btn.btn-creer{
+  background: #4bb6cf;
+    color: white;
+    border-color: #4bb6cf;
+}
+.btn-connect{
+  background: white;
+  color: #4bb6cf;
+  width: 30%;
+  border-color: #4bb6cf;
+  margin-left:1rem
+}
+.btn-primary {
+  background: #4bb6cf;
+  border-color: #4bb6cf;
+}
+.btn-primary:hover {
+  background: #278aa0;
+  border-color: #4bb6cf;
+}
+.register{
+  width: 30%;
+  height: 3rem;
+  background-color: white;
+  color: #001b36;
+  border-radius: 10px;
+}
+label{
+  color: #9c9c9c;
+}
+label.form-check-label {
+  color: black;
+}
+.btn-secondary {
+  color: #fff;
+  background-color:transparent !important;
+  border-color: transparent !important;
+  /* box-shadow: none; */
+}
+.dropdown-menu {
+
+min-width: 2rem !important;
+}
+.text{
+  width: 75%;
+    height: 3rem;
+    background-color: #001b36;
+    margin-right: 1.5rem;
+    color: white;
+    border-radius: 10px;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+  padding-right: .5rem;
+  color: #b7b7b7;
+  content: ">";
+}
+.cards{
+  align-items: center;
+    /* flex-direction: row; */
+    border: 2px solid #dadada;
+    border-radius: 6px;
+}
+
+
+.text-form{
+
+    height: 3rem;
+
+
+
+    border-radius: 10px;
+}
+.text-descr{
+  height: 10rem;
+
+    margin-top: 0.5rem;
+
+
+  border-radius: 10px;
+}
+.btn-conf{background: #4bb6cf;
+  color: white;
+  border-radius: 5px;
+}
+
+a.nav-link {
+  color: black;
+}

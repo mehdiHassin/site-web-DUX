@@ -1,0 +1,303 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+           <img class="pt-2" src="../assets/unnamed (1).png" width="25%" [routerLink]="'/'">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link"  style="color: #4bb6cf;" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affiche===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{'COMPTE'| translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+
+<div class="content">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container">
+      <div class="row mb-2 justify-content-center">
+
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active"  style="
+            color: #b7b7b7;
+        " >Date & heure</li>
+            <li class="breadcrumb-item "> <a href="#" style="
+              color: #4bb6cf;
+          ">Détails</a></li>
+            <li class="breadcrumb-item active" style="
+            color: #b7b7b7;
+        ">Réservé</li>
+          </ol>
+        <!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container">
+      <!-- Small boxes (Stat box) -->
+
+      <div class="row">
+        <div class="col">
+          <h3 style="
+          position: relative;
+
+          color: #4bb6cf;
+          font-weight: 600;
+      ">Ajouter plus d'information sur vous </h3>
+
+        </div>
+
+
+      </div>
+      <div class="row mb-4">
+      <div class="col-lg-8">
+        <div class="form-group row align-items-center">
+          <label for="inputEmail3" class="col-sm-3 col-form-label">Date &heure</label>
+          <div class="col-sm-7">
+            <p  style="color: #001b36;">{{Formation.heure}} -- {{Formation.dateFormation}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <div class="form-group row align-items-center">
+              <label for="inputEmail3" class="col-sm-3 col-form-label">Durée</label>
+              <div class="col-sm-7">
+                <p style="color: #001b36;">1 heure</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <div class="form-group row align-items-center">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Emplacement</label>
+                <div class="col-sm-7">
+                  <p style="color: #001b36;">  En ligne</p>
+
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-lg-8">
+                <div class="form-group row align-items-center">
+                  <label for="inputEmail3" class="col-sm-3 col-form-label">Participants</label>
+                  <div class="col-sm-7">
+                    <p style="color: #001b36;">{{Formation.nom}}</p>
+                    <p style="color: #001b36;">{{Formation.email}}</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-lg-8">
+                  <div class="form-group row ">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Détails</label>
+                    <div class="col-sm-7">
+                      <ul>
+                        <li>téléphone <span style="color: #4bb6cf;">{{Formation.telephone}}</span></li>
+                        <li>Email <span style="color: #4bb6cf;">  {{Formation.email}}</span></li>
+                        <li>nom de la sociéte <span style="color: #4bb6cf;">  {{Formation.nomSocite}}</span></li>
+
+                        <li>Votre secteur d'activité <span style="color: #4bb6cf;"> {{Formation.secteurActivite}}</span></li>
+                        <li>Décrivez vos besoins <span style="color: #4bb6cf;">{{Formation.description}}</span></li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                  <div class="row mb-4">
+                    <div class="col-lg-12">
+                      <p>Message de la direction</p>
+                      <p>Félicitation! votre rendez-vous est pris. Avant la réunion, vous recevrez un lien de conférence téléphonique par mail  .</p>
+                      <p>Jusqu'à une heure avant la réunion, vous avez le choix d'annuler ou de reprogrammer la réunion</p>
+                    </div>
+                    </div>
+                    <div class="row mb-4">
+                      <div class="col-lg-12" style="width: 82%; border-top: 1px solid #4bb6cf;">
+                       <div class="row">
+                        <div class="col-sm-10">
+
+                        </div>
+                          <div class="col-sm-2 mt-3 pr-0">
+                            <button type="button" class="btn btn-block btn-default btn-flat btn-conf float-right" (click)="delet()">Annuler/reprogrammer</button>
+                          </div>
+                       </div>
+
+                      </div>
+                      </div>
+
+
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="../../../assets/unnamed.png" alt=""
+            width="40%" >
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            A propos
+          </h6>
+          <p class="text-left pr-0" >
+            DUX est un progiciel de gestion intégré (ERP) qui convient à tous les secteurs d’activité
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            Adress
+          </h6>
+          <p class="text-left pr-5" >
+            Sfax (Siège): Avenue de la Liberté, Imm. El Itkane, 3ème étage, B11 3027, Sfax
+          </p>
+          <p class="text-left pr-5" >
+            Tunis: 7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053
+          </p>
+          <p class="text-left pr-5">
+            Sousse: Av Yasser Arafat, Résidence Chaima, 4ème étage App. 401 Sahloul, Sousse
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            A propos
+          </h6>
+          <p class="text-left pr-0 mb-0" >
+            Fonctionnalités
+           </p>
+           <p class="text-left pr-0 mb-0" >
+            Mediathéque
+           </p>
+           <p class="text-left pr-0 mb-0" >
+            Nos packs
+           </p>
+           <p class="text-left pr-0" >
+            Contact
+           </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left"  style="font-weight: 800;">S'inscrire aiw Newslettre </h6>
+         <div class="d-flex">
+          <input type="text"  name="input" class="form-control text-form text" placeholder="Entrer votre Email">
+          <button type="submit" class="btn btn-info  register">S'inscrire</button>
+
+         </div>
+         <h6 class="text-uppercase fw-bold  text-left mt-5"  style="font-weight: 800;">S'inscrire aiw Newslettre </h6>
+         <div class="d-flex ">
+          <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+          <!-- Right -->
+        </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>

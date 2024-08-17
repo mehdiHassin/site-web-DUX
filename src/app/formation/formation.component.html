@@ -1,0 +1,330 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+           <img class="pt-2" src="../assets/unnamed (1).png" width="25%" [routerLink]="'/'">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link"  style="color: #4bb6cf;
+                   border-bottom: 3px solid;
+                   font-weight: 600;" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affiche===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{ 'COMPTE' | translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+<div class="content">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container">
+      <div class="row mb-2 justify-content-center">
+
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active"  style="
+            color: #b7b7b7;
+        " >{{ 'breadcrumb.date_heure' | translate }}</li>
+            <li class="breadcrumb-item "> <a href="#" style="
+              color: #4bb6cf;
+          ">{{ 'breadcrumb.details' | translate }}</a></li>
+            <li class="breadcrumb-item active" style="
+            color: #b7b7b7;
+        ">{{ 'breadcrumb.reserve' | translate }}</li>
+          </ol>
+        <!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container">
+      <!-- Small boxes (Stat box) -->
+      <div class="row" style="justify-content: end;">
+        <div class="col-lg-3 col-6">
+        <h6 style="color:#9c9c9c;"> {{ 'CONTEXT_FORMATION.DETAILFORM' | translate }}</h6>
+        <p style="color: #9c9c9c;"><i class="fas fa-clock mr-2"></i> 1 heure</p>
+        <p style="color: #9c9c9c;"><i class="fas fa-video mr-2 "></i> En ligne</p>
+
+        </div>
+        <!-- ./col -->
+
+        <!-- ./col -->
+      </div>
+      <form [formGroup]="FormFormation" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col">
+            <h3 style="
+            position: relative;
+            top: -3rem;
+            color: #4bb6cf;
+            font-weight: 600;
+        ">{{ 'FORM_LABELS.addInfo' | translate }} </h3>
+
+          </div>
+
+
+        </div>
+        <div class="row mb-4">
+        <div class="col-lg-8">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.nom' | translate }}</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control text-form" id="inputEmail3" formControlName="nom" placeholder="{{ 'PLACEHOLDERS.nom' | translate }}" >
+            </div>
+          </div>
+        </div>
+        </div>
+
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.email' | translate }}</label>
+                <div class="col-sm-7">
+                  <input type="email" class="form-control text-form" id="inputEmail3" formControlName="email" placeholder="{{ 'PLACEHOLDERS.email' | translate }}" >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+              <div class="col-lg-8">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.telephone' | translate }}</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control text-form" id="inputEmail3" formControlName="telephone" placeholder="{{ 'PLACEHOLDERS.telephone' | translate }}">
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row mb-4">
+                <div class="col-lg-8">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.nomSocite' | translate }}</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control text-form" id="inputEmail3" formControlName="nomSocite" placeholder="{{ 'PLACEHOLDERS.nomSocite' | translate }}">
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="row mb-4">
+                  <div class="col-lg-8">
+                    <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.secteurActivite' | translate }}</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control text-form " id="inputEmail3"  formControlName="secteurActivite" placeholder="{{ 'PLACEHOLDERS.secteurActivite' | translate }}">
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          <div class="row mb-4">
+                    <div class="col-lg-8">
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.description' | translate }}</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control text-descr " id="inputEmail3" formControlName="description" placeholder="{{ 'PLACEHOLDERS.description' | translate }}" >
+                        </div>
+                      </div>
+                    </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-4 col-form-label pr-4">{{ 'FORM_LABELS.organisez' | translate }} </label>
+                <div class="col-sm-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1" id="entreprise" value="Mon entreprise" formControlName="organisez">
+                      <label class="form-check-label" for="entreprise">Mon entreprise</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1" id="client" value="Un de mes clients" formControlName="organisez">
+                      <label class="form-check-label" for="client">un de mes clients</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1" id="autre" value="Autre" formControlName="organisez">
+                      <label class="form-check-label" for="autre">Autre</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+                        <div class="col-lg-7" style="width: 82%; border-top: 1px solid #4bb6cf;">
+                         <div class="row">
+                          <div class="col-sm-8">
+
+                          </div>
+                            <div class="col-sm-4 mt-3 pr-0">
+                              <button type="submit" class="btn btn-block btn-default btn-flat btn-conf">{{ 'BUTTON_LABELS.confirmAppointment' | translate }}</button>
+                            </div>
+                         </div>
+
+                        </div>
+          </div>
+      </form>
+
+
+
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.ABOUT_TEXT' | translate }}  </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ADDRESS' | translate }}
+          </h6>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SFAX' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_TUNIS' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SOUSSE' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.FEATURES' | translate }}
+          </p>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.MEDIATHEQUE' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.OUR_PACKS' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.CONTACT' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }}</h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">{{ 'FOOTER.NEWSLETTER' | translate }}</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }} </h6>
+          <div class="d-flex ">
+            <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Right -->
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>

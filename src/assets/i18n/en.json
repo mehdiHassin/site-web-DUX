@@ -1,0 +1,189 @@
+{
+  "FORMATION": "Training",
+  "MEDIATHEQUE": "Media Library",
+  "NOS_PACKS": "Our Packs",
+  "CONTACTS": "Contact",
+  "CONNECTEZ_VOUS": "Log in",
+  "CREER_UN_COMPTE": "Create an Account",
+  "COMPTE": "Log out",
+  "HOME_PAGE": {
+    "WELCOME_MESSAGE": "A Tunisian ERP that is Efficient and Comprehensive",
+
+    "EASY_TO_HANDLE": "And Easy to Handle!",
+    "Devis":"Request for a quote"
+  },
+    "CONTENT": {
+    "TITLE": "Excellence Made in Tunisia!",
+    "DESCRIPTION": "DUX – ERP Tunisia is an integrated management software (ERP) suitable for all sectors. It offers optimal reorganization of the internal and external flows of your company to ensure perfect integration and to activate an effective and efficient management system, which prevents the company from suffering organizational errors that can negatively impact its finances and competitiveness."
+    ,"TITLEFONCT":"DUX-ERP Features",
+    "DESCFONCT":"Thanks to its modular architecture, each module of Dux – ERP is a complete software that can be used independently. Our clients can get the Dux pack that suits them or only the module(s) they want. With Dux – ERP, only pay for the features you need."
+
+  },
+  "CARDS":{
+    "LINGUES": "Languages",
+    "DEPOTS": "Depots",
+    "DEVISES": "Currencies",
+    "COMPTES": "Accounts",
+    "CAISSES": "Cash Registers",
+    "PLATFORME": "Platforms"
+  },
+  "CLIENTS": {
+    "TITLE": "Testimonials from Our Loyal Customers",
+    "TESTIMONIAL_1": "The DUX ERP portal has truly changed the way we manage our operations. Its intuitive interface and user-friendliness have greatly facilitated the training of our team.",
+    "TESTIMONIAL_2": "As an integrator, I am very satisfied with the media library of the DUX ERP portal. The demonstration videos are very helpful in understanding the complex features of the system.",
+    "TESTIMONIAL_3": "The client training management module of DUX ERP has significantly simplified our training process.",
+    "NAME_1": "Amine",
+    "NAME_2": "Mohamed",
+    "NAME_3": "Amira",
+    "STARS_1": "★★★★★",
+    "STARS_2": "★★★★★",
+    "STARS_3": "★★★★☆"
+  },
+  "TARIFFS": {
+    "TITLE": "Our Tariffs",
+    "CHOOSE_PACK": "Choose the pack that suits you",
+    "PACK_SIMPLE": "SIMPLE PACK",
+    "PACK_STANDARD": "STANDARD PACK",
+    "PACK_ENTERPRISE": "ENTERPRISE PACK",
+    "FREE_TRIAL": "FREE TRIAL",
+    "DEMAND_QUOTE": "REQUEST QUOTE",
+    "FREE_USER":"User Free",
+    "FEATURES_SIMPLE": ["Article Management", "Invoice Management", "Customer Management"],
+    "FEATURES_STANDARD": ["Commission Management", "Stock Management Mode", "Stock Valuation", "Offer Comparison", "Purchase Entry", "Payment", "Invoicing"],
+    "FEATURES_ENTERPRISE": ["Commission Management", "Stock Management Mode", "Cash Flow Dashboard", "General Expenses Management", "Stock Valuation", "Offer Comparison", "Purchase Entry", "Payment", "Invoicing"]
+  },
+  "NEWS": {
+    "TITLE": "DUX-ERP News",
+    "DESCRIPTION": "Discover the latest news and innovations from DUX ERP, the enterprise management portal that revolutionizes how organizations optimize their operations.",
+    "BUTTON_TEXT": "View Articles",
+    "NEWS_TITLE": "ProCheque is Born!",
+    "NEWS_DESCRIPTION": "ASM's check and draft management and printing software, ProCheque, is born.",
+    "READ_ARTICLE": "Read Article"
+  },
+  "CONTACT": {
+    "TITLE_1": "Talk to an expert. We are here to help",
+    "TITLE_2": "Contact our advisors for any additional information",
+    "PHONE": "+(216) 92 022 808",
+    "EMAIL": "sav@asm-tunisie.com"
+  },
+   "FLEXIBILITY": {
+    "TITLE": "The Flexibility of Dux-ERP",
+    "DESCRIPTION": "Dux-ERP guarantees absolute flexibility, allowing it to adapt to any workflow regardless of the size of the company in Tunisia or abroad:",
+    "FEATURES": [
+      "Dux-ERP document circuits",
+      "Dux-ERP is Multi-User",
+      "Personalized document printing",
+      "Dux-ERP evolves with your workflow"
+    ]
+  },
+  "ASSISTANCE": {
+    "TITLE": "Request expert assistance",
+    "FEATURES": [
+      "Choose date and time for training",
+      "An expert is available just to answer you",
+      "Responsiveness and speed of intervention"
+    ],
+    "BUTTON": "Schedule now"
+  },
+  "REFERENCES": {
+    "TITLE": "Our References"
+  },
+  "FOOTER": {
+    "ABOUT": "About",
+    "ADDRESS": "Address",
+    "FEATURES": "Features",
+    "MEDIATHEQUE": "Media Library",
+    "OUR_PACKS": "Our Packs",
+    "CONTACT": "Contact",
+    "NEWSLETTER_SUBSCRIBE": "Subscribe to Newsletter",
+    "NEWSLETTER": "Subscribe",
+    "EMAIL_PLACEHOLDER": "Enter your email address",
+    "SUBSCRIBE": "Subscribe",
+    "ABOUT_TEXT": "DUX is an Enterprise Resource Planning (ERP) software suitable for all sectors of activity",
+    "ADDRESS_TEXT_SFAX": "Sfax (Headquarter): Avenue de la Liberté, Imm. El Itkane, 3rd floor, B11 3027, Sfax",
+    "ADDRESS_TEXT_TUNIS": "Tunis: 7, rue du Lac Côme, Imm. Nessima, 1st floor, App 1, 2 and 3 And Les Berges du Lac, 1053",
+    "ADDRESS_TEXT_SOUSSE": "Sousse: Av Yasser Arafat, Résidence Chaima, 4th floor App. 401 Sahloul, Sousse",
+    "FOLLOW_US": "Follow us on"
+  },
+
+  "breadcrumb": {
+    "date_heure": "Date & time",
+    "details": "Details",
+    "reserve": "Reserved"
+  },
+  "CONTEXT_FORMATION": {
+    "DETAILFORM": "Meeting details",
+    "TITRE_FORMATION": "Training with an expert",
+    "DESCRIPTION_FORMATION": "Training with an expert",
+    "DESCRIPTION":"Description",
+     "selectDateTime": "Select a date & time"
+
+  },
+  "meeting_schedule": {
+    "paragraph": "Schedule a free one-hour meeting with an expert to get:",
+    "items": [
+      "a personalized demonstration",
+      "recommendations based on your needs",
+      "answers to your questions about Dux",
+      "information on pricing and methodology"
+    ]
+  },
+  "FORM_LABELS": {
+    "addInfo": "Add more information about yourself",
+    "nom": "Full Name",
+    "email": "Email",
+    "telephone": "Phone Number",
+    "nomSocite": "Company Name",
+    "secteurActivite": "Your Industry Sector",
+    "description": "Description",
+    "organisez": "Who are you scheduling the appointment for?"
+  },
+  "BUTTON_LABELS": {
+    "confirmAppointment": "Confirm Appointment"
+  },
+  "PLACEHOLDERS": {
+    "nom": "Enter your full name",
+    "email": "Enter your email",
+    "telephone": "Enter your phone number",
+    "nomSocite": "Enter your company name",
+    "secteurActivite": "Enter your industry sector",
+    "description": "Enter a description",
+    "organisez": "Select an option"
+  },
+  "DETAILS_SECTION": {
+    "dateTimeLabel": "Date & time",
+    "durationLabel": "Duration",
+    "locationLabel": "Location",
+    "participantsLabel": "Participants",
+    "detailsLabel": "Details",
+    "phoneNumber": "Phone Number",
+    "email": "Email",
+    "companyName": "Company Name",
+    "businessSector": "Your Business Sector",
+    "describeNeeds": "Describe your needs",
+    "directionMessage": "Management Message",
+    "congratulationMessage": "Congratulations! Your appointment is booked. Before the meeting, you will receive a conference call link by email. Up to an hour before the meeting, you have the choice to cancel or reschedule the meeting.",
+    "cancelRescheduleButton": "Cancel/Reschedule"
+  },
+  "knowledge_world": "The world of knowledge:",
+  "tutorial_demo": "Tutorial and practical demo",
+  "Actualite":"news",
+  "Module":"Module Dux",
+  "need_assistance": "Need assistance with an",
+  "expert": "EXPERT",
+  "apply_now": "Apply Now",
+  "contact_us": "Contact Us",
+  "procheque_title": "ProCheque Takes Flight",
+  "read_article": "Read Article",
+  "asm_expansion_title": "ASM Continues Its Expansion, And Dux-ERP Its Evolution!",
+  "software_update_title": "ProPayroll Software Update",
+  "dux_erp_update_2020": "Update of Dux ERP, Version 2020",
+  "procheque_description": "The check and promissory note management and printing software from ASM, ProCheck, is born. Equipped with a printing settings module compatible with the check templates of all available banks, it allows printing legible and 100% reliable checks.",
+  "our_references": "Our References",
+  "dux_update_description": "A drastic update of the Dux ERP, version 2020! With even more fixes, features, Dux is faster and more stable than ever. A new, user-friendly interface and reorganized menus for a smoother workflow.",
+  "propaie_update_description": "Our payroll software, ProPayroll, has been updated to facilitate the calculation of the provisional and exceptional contribution for the year 2020 to the benefit of the state budget. Thanks to ProPayroll, this exceptional contribution will be automatically calculated based on the annual net income or annual net pension determined after deductions.",
+  "text": "Dux-ERP continues its evolution! ASM is continuing to expand its premises and workforce! With more offices and development engineers, business specialists, and ERP integrators, our company is as ready as ever to meet the needs of its growing clientele. ASM is more ready than ever to conquer the ERP market in Tunisia. Dux-ERP now has more soldiers worthy of its weight. ASM is recruiting more than 15 new experienced employees in various fields, opening new offices, and integrating new innovative technological options."
+
+
+
+}

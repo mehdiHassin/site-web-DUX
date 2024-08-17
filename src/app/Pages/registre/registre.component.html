@@ -1,0 +1,91 @@
+<div class="hold-transition login-page">
+  <div class="" style="width: 800px;">
+    <!-- /.login-logo -->
+    <div class="card card-outline  " style="
+    height: 500px;">
+   <div class="row">
+    <div class="col-md-7">
+      <div class="text-center">
+        <img class="pt-4 pb-3" src="../assets/unnamed (1).png" width="15%">
+      </div>
+      <div class="card-body card-body pl-5 pr-5 pb-5 pt-0">
+
+        <form [formGroup]="RegistreForm" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="row ">
+            <div class="coolinput col-md-6 pl-0">
+              <label for="input" class="text">Nom</label>
+              <input type="text"  name="input" class="form-control form-text" formControlName="firstname">
+          </div>
+          <div class="coolinput col-md-6 pr-0 ">
+            <label for="input" class="text">Prénom</label>
+            <input type="text"  name="input" class="form-control form-text" formControlName="lastname" >
+        </div>
+          </div>
+          <div class="row">
+            <div class="coolinput col-md-12 pl-0">
+              <label for="input" class="text">Numéro de téléphone</label>
+              <input type="text"  name="input" class="form-control form-text" formControlName="phone" >
+          </div>
+
+          </div>
+          <div class="row">
+            <div class="coolinput col-md-12 pl-0">
+              <label for="input" class="text">Email</label>
+              <input type="text"  name="input" class="form-control form-text" formControlName="email">
+          </div>
+
+          </div>
+          <div class="row">
+            <div class="coolinput col-md-12 pl-0 ">
+              <label for="input" class="text">Mot de passe</label>
+              <input type="password"  name="input" class="form-control form-text" formControlName="password">
+          </div>
+
+          </div>
+         <div class="row">
+          <div class="coolinput col-md-12 pl-0">
+            <label for="input" class="text">Confirmer Mot de passe</label>
+            <input type="password"  name="input" class="form-control form-text" formControlName="Confirmedpassword">
+        </div>
+         </div>
+          <div class="row">
+            <div class="col-md-12 p-0 pt-4">
+              <button type="submit" class="btn btn-primary btn-block register">Créer votre compte</button>
+              <span style="
+              font-size: 13px;
+              color: #b7b4b4;
+          ">
+                Vous avez  deja un compte
+            </span>
+            <a [routerLink]="'/login'" style="
+            font-size: 13px;
+            color: #001b36;
+            font-weight: 600;
+        ">conectez-vous </a>
+            </div>
+          </div>
+
+        </form>
+
+
+
+
+        <!-- /.social-auth-links -->
+
+
+      </div>
+    </div>
+    <div  class=" col-md-5 imageback" style="
+    height:500px;">
+
+    </div>
+   </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.login-box -->
+
+  <!-- jQuery -->
+
+  </div>

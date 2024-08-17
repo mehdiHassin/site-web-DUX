@@ -1,0 +1,9 @@
+.text-true {
+  color: green;
+  font-weight: bold;
+}
+
+.text-false {
+  color: red;
+  font-weight: bold;
+}

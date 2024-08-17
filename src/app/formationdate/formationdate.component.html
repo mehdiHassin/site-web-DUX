@@ -1,0 +1,324 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+            <img class="pt-2" src="../assets/unnamed (1).png" width="25%" [routerLink]="'/'">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link"  style="color: #4bb6cf;
+                   border-bottom: 3px solid;
+                   font-weight: 600;" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affiche===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{ 'COMPTE' | translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+
+
+<div class="content">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container">
+      <div class="row mb-2 justify-content-center">
+
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#" style="
+              color: #4bb6cf;
+          ">{{ 'breadcrumb.date_heure' | translate }}</a></li>
+            <li class="breadcrumb-item active" style="
+            color: #b7b7b7;
+        ">{{ 'breadcrumb.details' | translate }}</li>
+            <li class="breadcrumb-item active" style="
+            color: #b7b7b7;
+        ">{{ 'breadcrumb.reserve' | translate }}</li>
+          </ol>
+        <!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container">
+      <!-- Small boxes (Stat box) -->
+      <div class="row" style="justify-content: end;">
+        <div class="col-lg-3 col-6">
+          <h6 style="color:#9c9c9c;">{{ 'CONTEXT_FORMATION.DETAILFORM' | translate }}</h6>
+          <p style="color: #9c9c9c;"><i class="fas fa-clock mr-2"></i> 1 heure</p>
+          <p style="color: #9c9c9c;"><i class="fas fa-video mr-2 "></i> En ligne</p>
+
+        </div>
+        <!-- ./col -->
+
+        <!-- ./col -->
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3 class="titre">{{ 'CONTEXT_FORMATION.TITRE_FORMATION' | translate }}</h3>
+          <p class="sous-titre">{{'CONTEXT_FORMATION.selectDateTime'| translate }}</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="calendar">
+            <div class="year-header">
+              <span class="left-button fa fa-chevron-left" id="prev" (click)="prevYear()"> </span>
+              <span class="year" id="label">{{ currentYear }}</span>
+              <span class="right-button fa fa-chevron-right" id="next" (click)="nextYear()"> </span>
+            </div>
+            <table class="months-table w-100">
+              <tbody>
+                <tr class="months-row">
+                  <td class="month" *ngFor="let month of months" (click)="selectMonth(month)">{{ month }} </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="days-table w-100">
+              <tr>
+                <td class="day" *ngFor="let day of days">{{ day }}</td>
+              </tr>
+            </table>
+            <div class="frame">
+              <table class="dates-table w-100">
+                <tbody class="tbody">
+                  <tr *ngFor="let week of dates">
+                    <td *ngFor="let date of week"
+                        [ngClass]="{'selected': isSelected(date)}"
+                        (click)="selectDate(date)">
+                        {{ date }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+
+
+          <div class="row">
+            <div class="ml-2 mb-2 mr-3">
+              <button type="button" value="08:00" [ngClass]="{'active-btn': selectedValue === '08:00'}" class="btn btn-block btn-default btn-flat btn-conf"(click)="onButtonClick($event)">08:00</button>
+
+            </div>
+             <div >
+              <button type="button" value="10:00" [ngClass]="{'active-btn': selectedValue === '10:00'}" class="btn btn-block btn-default btn-flat btn-conf" (click)="onButtonClick($event)">10:00</button>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="ml-2 mb-2 mr-3">
+              <button type="button" value="12:00" [ngClass]="{'active-btn': selectedValue === '12:00'}" class="btn btn-block btn-default btn-flat btn-conf" (click)="onButtonClick($event)">12:00</button>
+
+            </div>
+             <div >
+              <button type="button" value="14:00" [ngClass]="{'active-btn': selectedValue === '14:00'}" class="btn btn-block btn-default btn-flat btn-conf" (click)="onButtonClick($event)">14:00</button>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="ml-2 mb-2 mr-3">
+              <button type="button" value="16:00" [ngClass]="{'active-btn': selectedValue === '16:00'}" class="btn btn-block btn-default btn-flat btn-conf" (click)="onButtonClick($event)">16:00</button>
+
+            </div>
+             <div >
+              <button type="button" value="18:00" [ngClass]="{'active-btn': selectedValue === '18:00'}" class="btn btn-block btn-default btn-flat btn-conf" (click)="onButtonClick($event)">18:00</button>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="ml-2 mb-2 mr-3">
+              <button type="button" value="20:00" [ngClass]="{'active-btn': selectedValue === '20:00'}"  class="btn btn-block btn-default btn-flat btn-conf" (click)="onButtonClick($event)">20:00</button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- right col -->
+      </div>
+      <div class="row">
+
+        <p class="ml-1 mb-0">{{'CONTEXT_FORMATION.DESCRIPTION'| translate }}</p>
+
+
+
+      </div>
+      <div class="row">
+         <p class="ml-1 ">{{ 'meeting_schedule.paragraph'|translate }}</p>
+        </div>
+
+      <div class="row">
+        <ul>
+          <li *ngFor="let feature of 'meeting_schedule.items' | translate">{{ feature }}</li>
+
+        </ul>
+      </div>
+    </div><!-- /.container-fluid -->
+
+
+  </section>
+  <!-- /.content -->
+</div>
+
+
+
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.ABOUT_TEXT' | translate }}  </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ADDRESS' | translate }}
+          </h6>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SFAX' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_TUNIS' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SOUSSE' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.FEATURES' | translate }}
+          </p>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.MEDIATHEQUE' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.OUR_PACKS' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.CONTACT' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }}</h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">{{ 'FOOTER.NEWSLETTER' | translate }}</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }} </h6>
+          <div class="d-flex ">
+            <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Right -->
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+

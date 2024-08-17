@@ -1,0 +1,287 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+            <img class="pt-2" src="assets/unnamed (1).png" width="25%">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link"  style="color: #4bb6cf;" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+ <button type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/register'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+<div class="content">
+
+
+    <div class="container px-5">
+      <div class="row mt-5 mb-3">
+        <div class="col-mb-3">
+          <img src="assets/illustration/5.png" width="260px"  alt="">
+        </div>
+        <div class="col-md-8">
+          <h5 class="titre">Module</h5>
+          <h5 class="sous-titre">Dux Immobilisation</h5>
+          <p class="description">Un système de gestion des clients comprend un module de prospection pour attirer de nouveaux clients, un module de gestion des réclamations pour répondre aux besoins et préoccupations des clients existants et un module d'enquêtes de satisfaction pour évaluer leur niveau de satisfaction. </p>
+          </div>
+      </div>
+
+
+        <div class="row mb-5 mt-5  justify-content-center">
+          <div class="timeline-item">
+
+            <h3 class="timeline-header">Cours pour débutant</h3>
+
+            <div class="timeline-body">
+              <div class="row justify-content-center ">
+                <video width="300" height="200" controls class="m-2">
+                  <source src="assets/videos/ERP Software demo.mp4" type="video/mp4" >
+
+                </video>
+                   <video width="300" height="200" controls class="m-2">
+                  <source src="assets/videos/Enterprise Resource Planning (ERP).mp4" type="video/mp4" >
+
+                </video>
+                <video width="300" height="200" controls class="m-2">
+                  <source src="assets/videos/What is ERP software.mp4" type="video/mp4" >
+
+                </video>
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5  justify-content-center">
+          <div class="timeline-item">
+            <h3 class="timeline-header">nouveaux cours</h3>
+            <div class="timeline-body">
+              <div class="row justify-content-center ">
+                <video width="300" height="200" controls class="m-2">
+                  <source src="assets/videos/What is ERP software.mp4" type="video/mp4" >
+
+                </video>
+                   <video width="300" height="200" controls class="m-2">
+                  <source src="assets/videos/What Is CRM  Introduction To CRM Software CRM Projects For Beginners  CRM 2022  Simplilearn.mp4" type="video/mp4" >
+
+                </video>
+                <video width="300" height="200" controls class="m-2">
+                  <source src="assets/videos/Why ERP is important .mp4" type="video/mp4" >
+
+                </video>
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5"></div>
+      <div class="row mt-5 imageback" >
+        <div class="row pl-5">
+          <div class="col-md-4 mr-5  mt-5" >
+            <h2 style="font-size: 2.5rem; font-size: 600; " class="text-white">Besoin d'une assistance avec un <span style="color:#ffb800 ;">EXPERT ?</span> </h2>
+            <button  type="button" class="btn btn-block btn-warning text-white" style="width: 70%;
+            background: #ffb800;">postuler maintenant</button>
+          </div>
+        </div>
+        <div class="row" style="flex-direction: column-reverse;">
+
+
+ <div class="row text-white mb-4 justify-content-center">
+   <i  class="fab fa-facebook-square  pr-2" ></i>
+  <i  class="fab fa-instagram pr-2" ></i>
+  <i class="fab fa-linkedin" aria-hidden="true"></i>
+ </div>
+
+
+  <p class="text-white ml-2">
+    sav@asm-tunisie.com
+
+  </p>
+
+  <p class="ml-4 text-white" style="font-weight: 600; margin-bottom: -0.25rem;">
+    +(216) 92 022 806
+
+  </p>
+
+<div class="row">
+<img src="../../../assets/icons/Icon.png" alt="" width="20%" class="mt-1">
+<span class="text-white">contacter nous</span>
+</div>
+</div>
+      </div>
+
+
+
+
+    </div><!-- /.container-fluid -->
+
+
+
+  <!-- /.content -->
+</div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.ABOUT_TEXT' | translate }}  </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ADDRESS' | translate }}
+          </h6>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SFAX' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_TUNIS' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SOUSSE' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.FEATURES' | translate }}
+          </p>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.MEDIATHEQUE' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.OUR_PACKS' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.CONTACT' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }}</h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">{{ 'FOOTER.NEWSLETTER' | translate }}</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }} </h6>
+          <div class="d-flex ">
+            <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Right -->
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script src="../../../assets/dist/js/mains.js">
+
+</script>

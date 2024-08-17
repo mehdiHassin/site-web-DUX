@@ -1,0 +1,450 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+           <img class="pt-2" src="../assets/unnamed (1).png" width="25%" [routerLink]="'/'">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link"  style="color: #4bb6cf;
+             border-bottom: 3px solid;
+             font-weight: 600;" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affiche===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{ 'COMPTE' | translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+<div class="content">
+  <!-- Content Header (Page header) -->
+
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container">
+      <!-- Small boxes (Stat box) -->
+
+      <div class="row mt-5 mb-4">
+        <div class="col">
+          <h3 style="
+
+
+          color: #4bb6cf;
+          font-weight: 600;
+      ">Ajouter plus d'information sur vous </h3>
+          <p style="
+          font-size: 19px;
+          font-weight: 500;
+      ">Nous Sommes disponible pour vous aider</p>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row mb-4">
+            <div class="col-lg-12">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.nom' | translate }}</label>
+
+                <div class="col-sm-7">
+                  <input type="text" class="form-control text-form" id="inputEmail3"   >
+
+                </div>
+              </div>
+            </div>
+            </div>
+          <div class="row mb-4">
+            <div class="col-lg-12">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.email' | translate }}</label>
+
+                <div class="col-sm-7">
+                  <input type="email" class="form-control text-form" id="inputEmail3" >
+
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-lg-12">
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.telephone' | translate }}</label>
+
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control text-form" id="inputEmail3">
+
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-lg-12">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">{{ 'FORM_LABELS.nomSocite' | translate }}</label>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control text-form" id="inputEmail3" formControlName="nomSocite" >
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-lg-12">
+                    <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label">Sujet</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control text-form " id="inputEmail3" >
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-lg-12">
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Taille de votre entreprise</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control text-form " id="inputEmail3" >
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  <div class="row mb-4">
+                    <div class="col-lg-12">
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Question</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control text-descr " id="inputEmail3" >
+                          <p style="font-size: 13px;">
+                            Pour répondre à vos questions et vous fournir plus d'informations
+                            sur nos produits et services, nous traiterons vos données à caractère personnel
+                             de la manière décrite dans notre politique vie privée.
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    </div>
+
+                      <div class="row mb-4">
+                        <div class="col-lg-7" style="width: 82%; border-top: 1px solid #4bb6cf;">
+                         <div class="row">
+                          <div class="col-sm-8">
+
+                          </div>
+                            <div class="col-sm-4 mt-3 pr-0">
+                              <button type="button" class="btn btn-block btn-default btn-flat btn-conf">Soumettre</button>
+                            </div>
+                         </div>
+
+                        </div>
+                        </div>
+
+        </div>
+<div class="col-md-4">
+  <h4 style="
+  color: #001b36;
+  margin-bottom: 0;
+">Contact direct</h4>
+  <p style="
+  font-size: 15px;
+  color: gray;
+">Planifier ou organiser une vidéoconférence</p>
+  <div class="row mb-4 align-items-center">
+    <i class="fas fa-phone mr-3" style="color: #4bb6cf; font-size: 20px;"></i> <span style="color: #4bb6cf;">+ (216) 92 022 808</span>
+  </div>
+  <div class="row cards" [routerLink]="'/dateformation'">
+    <img src="assets/icons/icon-Multi-Caisses_.png" class="mr-2" alt="">
+    <div>
+      <p style="
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 18px;
+  ">organiser une demo</p>
+      <p style="font-size: 14px;">Presentation personnalisée et gratuite par un expert</p>
+
+    </div>
+  </div>
+  <div class="row cards mt-3" [routerLink]="'/dateformation'">
+    <img src="assets/icons/icon-Multi-Caisses_.png" class="mr-2" alt="">
+    <div>
+      <p style="
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 18px;
+  ">Devenir partenaire</p>
+      <p style="font-size: 15px;">Rendez-vous avec un partenaire responsable</p>
+
+    </div>
+  </div>
+  <div class="row cards mt-3" [routerLink]="'/dateformation'">
+    <img src="assets/icons/icon-Multi-Caisses_.png" class="mr-2" alt="">
+    <div>
+      <p style="
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 18px;
+  ">Demandez un dévloppement spécialisé</p>
+      <p style="font-size: 15px;">Besoin de contacter des devloppement?</p>
+
+    </div>
+  </div>
+</div>
+      </div>
+
+
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+
+  </section>
+
+  <!-- /.content -->
+</div>
+
+
+<section style="background-color: #e5faff; padding-bottom: 1rem;">
+  <div class="container">
+    <div class="row mt-4">
+      <h3>Les bureaux de dux</h3>
+      <p>Avec plus de 100 employés à son actif, la société ASM est une multinationale basée en Tunisie mais qui a des filières :
+        en Algérie , au Sénégal et en France.</p>
+    </div>
+    <div class="row mt-4">
+      <span class="flag-icon flag-icon-tn flag-icon-squared" style="width: 2em;"> </span> <span style="
+      font-size: 20px;
+      margin-left: 1rem;
+  ">Tunisie </span>
+
+
+    </div>
+    <div class="row mb-4 justify-content-center text-center" style="background-color: white; color: black;">
+      <div class="col-md-4 pt-2 pr-5 pl-5">
+        <p>Tunis</p>
+        <p>7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053</p>
+     <p>Téléphone : (+216) 71 65 52 61</p>
+      </div>
+      <div class="col-md-4 pt-2 pr-5 pl-5">
+        <p>Sfax</p>
+        <p>Siège: Avenue de la Liberté, Imm. El Itkane, 3ème étage, B11 3027, Sfax
+          Showroom: Rte Manzel Chaker Km 2.5, Imm. Aziza</p>
+     <p>Téléphone : (+216) 74 41 50 55</p>
+      </div>
+      <div class="col-md-4 pt-2 pr-5 " style="padding-left:4rem ;">
+        <p>Sousse</p>
+        <p>Av Yasser Arafat, Résidence Chaima, 4ème étage App. 401 Sahloul, Sousse</p>
+     <p>Téléphone : (+216) 73 36 81 15</p>
+      </div>
+    </div>
+    <h3>Les bureaux de dux</h3>
+    <div class="row mt-4 mb-5 justify-content-between" >
+      <div class="col-md-3 mr-5">
+        <div class="row">
+          <span class="flag-icon flag-icon-dz flag-icon-squared" style="width: 2em;"> </span> <span style="
+          font-size: 20px;
+          margin-left: 1rem;
+      ">Algérie </span>
+        </div>
+        <div class="row mt-3"
+        style="
+    background: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    text-align: center;
+">
+          <p>Algérie</p>
+          <p>7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053</p>
+       <p>Téléphone : (+216) 71 65 52 61</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mr-5">
+        <div class="row">
+          <span class="flag-icon flag-icon-fr flag-icon-squared" style="width: 2em;"> </span> <span style="
+          font-size: 20px;
+          margin-left: 1rem;
+      ">France </span>
+        </div>
+        <div class="row mt-3"
+        style="
+    background: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    text-align: center;
+">
+          <p>France</p>
+          <p>7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053</p>
+       <p>Téléphone : (+216) 71 65 52 61</p>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="row">
+          <span class="flag-icon flag-icon-sn flag-icon-squared" style="width: 2em;"> </span> <span style="
+          font-size: 20px;
+          margin-left: 1rem;
+      ">Sénégal </span>
+        </div>
+        <div class="row mt-3"
+        style="
+    background: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    justify-content: center;
+    text-align: center;
+">
+          <p>Sénégal</p>
+          <p>7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053</p>
+       <p>Téléphone : (+216) 71 65 52 61</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.ABOUT_TEXT' | translate }}  </p>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ADDRESS' | translate }}
+          </h6>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SFAX' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_TUNIS' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SOUSSE' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.FEATURES' | translate }}
+          </p>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.MEDIATHEQUE' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.OUR_PACKS' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.CONTACT' | translate }}
+          </p>
+
+        </div>
+
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }}</h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">{{ 'FOOTER.NEWSLETTER' | translate }}</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }} </h6>
+          <div class="d-flex ">
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</footer>
+

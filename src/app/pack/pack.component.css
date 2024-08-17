@@ -1,0 +1,225 @@
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+}
+.btn-connect{
+  background: white;
+  color: #4bb6cf;
+  width: 30%;
+  border-color: #4bb6cf;
+}
+.text-tap{
+  color: #000 !important;
+}
+button.btn.btn-creer{
+  background: #4bb6cf;
+    color: white;
+    border-color: #4bb6cf;
+}
+.btn-primary {
+  background: #4bb6cf;
+  border-color: #4bb6cf;
+}
+.btn-primary:hover {
+  background: #278aa0;
+  border-color: #4bb6cf;
+}
+a.nav-link {
+  color: black;
+}
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInOut 3s ease-in-out infinite;
+  /* animation-fill-mode: forwards; */ /* This can be removed for repetitive animations */
+}
+
+/* Add different animation delays */
+.animate-fade-in:nth-child(1) {
+  animation-delay: 0s;
+}
+.animate-fade-in:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.animate-fade-in:nth-child(3) {
+  animation-delay: 1s;
+}
+.animate-fade-in:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.animate-fade-in:nth-child(5) {
+  animation-delay: 2s;
+}
+.animate-fade-in:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.pricing-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: start;
+  height: 34rem;
+}
+.pricing-card.featured {
+  background-color: #4bb6cf;
+  color: white;
+}
+.pricing-card .price {
+  background-color: #4bb6cf;
+  color: white;
+  padding-left: 31px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  /* margin: 0px; */
+  margin-right: 2rem;
+  margin-left: -1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.pricing-card.featured .price {
+  background-color: white;
+  color: #4bb6cf;
+}
+.pricing-card ul {
+  list-style: none;
+  padding-left: 13px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.pricing-card ul li {
+  margin: 10px 0;
+}
+.pricing-card .btn {
+  background-color: white;
+  color: #4bb6cf;
+  border: 2px solid #4bb6cf;
+  padding: 10px 20px;
+  margin-top: 1.65rem;
+  border-radius: 5px;
+}
+.pricing-card .btn2 {
+  background-color: #4bb6cf;
+  color: white;
+  border: 2px solid white ;
+  padding: 10px 20px;
+  margin-top: 1.65rem;
+  border-radius: 5px;
+}
+.pricing-card .btn:hover {
+  background-color: #4bb6cf;
+  color: white;
+}
+.btn-secondary {
+  color: #fff;
+  background-color:transparent !important;
+  border-color: transparent !important;
+  /* box-shadow: none; */
+}
+.dropdown-menu {
+
+min-width: 2rem !important;
+}
+
+.titre-pack{
+  color: #022347;
+    padding: 0 13rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+}
+.feature-card:hover{
+  transform: scale(1.1);
+}
+.feature-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #001b36;
+  color: #ffffff;
+  padding: 12px;
+  align-items: center;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  height: 11rem;
+}
+
+.icon {
+  text-align: start;
+}
+.feature-card h5 {
+  margin-top: 10px;
+}
+.titre_module{
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.soustitre_module{
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #4bb6cf;
+  font-weight: 600;
+}
+.description_module{
+  font-size: 10px;
+}
+
+
+.flexibility-section {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+.flexibility-content {
+  max-width: 600px;
+}
+.flexibility-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.checklist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checklist-item svg {
+  color: #00bfff;
+  margin-right: 10px;
+}
+.section4{
+  background-image: url("../../assets/pics/fond-grille-numerique-futuriste-bleu-fonce-degrade.jpg");
+
+  background-size: cover;
+
+
+  }
+
+  .text{
+    width: 75%;
+      height: 3rem;
+      background-color: #001b36;
+      margin-right: 1.5rem;
+      color: white;
+      border-radius: 10px;
+  }
+  .register{
+    width: 30%;
+    height: 3rem;
+    background-color: white;
+    color: #001b36;
+    border-radius: 10px;
+  }

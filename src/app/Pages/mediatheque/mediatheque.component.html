@@ -1,0 +1,675 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+            <img class="pt-2" src="../assets/unnamed.png" width="25%" [routerLink]="'/'">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link"  [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  style="    color: #001b36 !important;
+              font-weight: 600;
+              border-bottom: 2px solid;" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affichebtn===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affichebtn===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affichebtn===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{ 'COMPTE' | translate }}</button>
+
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <img [src]="currentFlag" alt="Current Language" width="20px">
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" (click)="changeLanguage('fr')">
+      <img src="assets/flags/fr.png" alt="Français" width="20px">
+    </a>
+    <a class="dropdown-item" (click)="changeLanguage('en')">
+      <img src="assets/flags/gb.png" alt="English" width="20px">
+    </a>
+    <!-- Ajoutez d'autres langues ici -->
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row mt-5 pt-5">
+      <h2 class="mt-5">
+        {{ 'knowledge_world' | translate }}
+      </h2>
+
+    </div>
+    <div class="row mb-5 pb-5">
+      <h2>
+        {{ 'tutorial_demo' | translate }}
+      </h2>
+
+    </div>
+  </div>
+</section>
+
+<div class="content">
+  <!-- Content Header (Page header) -->
+
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container  px-5">
+
+
+      <ul class="nav nav-tabs mt-3" id="custom-content-above-tab" role="tablist"
+        style=" justify-content: space-evenly;">
+        <li class="nav-item">
+          <a class="nav-link active text-tap" id="custom-content-above-home-tab" data-toggle="pill"
+            href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"
+            style="color: black !important;" (click)="reset()"> {{ 'Module' | translate }}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-tap" id="custom-content-above-settings-tab" data-toggle="pill"
+            href="#custom-content-above-settings" role="tab" aria-controls="custom-content-above-settings"
+            aria-selected="false" style="color: black !important;" (click)="reset()"> {{ 'Actualite' | translate }}</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="custom-content-above-tabContent">
+        <div class="tab-pane fade show active px-5" id="custom-content-above-home" role="tabpanel"
+          aria-labelledby="custom-content-above-home-tab">
+          <div class="row mt-5" style=" justify-content: space-between;  ">
+            <div class="testimonial-card" style="
+            width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;" routerLink="/gpao">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+                                 color: #4bb6cf;
+                                  ">Dux GPAO</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="testimonial-card" style="
+            width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;"
+                routerLink="/comptabilite">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">Comptabilité</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="testimonial-card" style="
+            width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;"
+                routerLink="/gmao">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">GMAO</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="testimonial-card" style="
+            width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;" routerLink="/crm">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">Dux CRM</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5" style=" justify-content: space-between;  ">
+            <div class="testimonial-card" style="
+          width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;" routerLink="/pointage">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">Dux Pointage</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="testimonial-card" style="
+          width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;" routerLink="/paie">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">Dux Paie</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="testimonial-card" style="
+          width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;" routerLink="/immobilisation">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">Immobilisation</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="testimonial-card" style="
+          width: 186px;  ">
+              <div style="background-color: #001b36;border: 1px solid;color: white; border-radius: 8px;" routerLink="/decitionel">
+                <div class="row mx-1 justify-content-between ">
+                  <div class="mt-2">
+                    <i class="fa fa-briefcase pl-4 pr-2"></i>Module
+                    <p class="pl-4 mb-2" style="
+    color: #4bb6cf;
+">Décisionnel</p>
+                  </div>
+                  <div class="pr-2">
+                    <i class="fa fa-arrow-right mt-4"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5 imageback">
+            <div class="row pl-5">
+              <div class="col-md-4 mr-5  mt-5">
+                <h2>{{ 'need_assistance' | translate }} <span style="color:#ffb800 ;">{{ 'expert' | translate }} ?</span> </h2>
+                <button (click)="gotoformation()" type="button" class="btn btn-block btn-warning text-white" style="width: 70%;
+              background: #ffb800;">{{ 'apply_now' | translate }}</button>
+              </div>
+            </div>
+            <div class="row" style="flex-direction: column-reverse; margin-left: -13.5rem; ">
+
+
+              <div class="row text-white mb-4 justify-content-center">
+                <i class="fab fa-facebook-square  pr-2"></i>
+                <i class="fab fa-instagram pr-2"></i>
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </div>
+
+
+              <p class="text-white ml-2">
+                sav@asm-tunisie.com
+
+              </p>
+
+              <p class="ml-4 text-white" style="font-weight: 600; margin-bottom: -0.25rem;">
+                +(216) 92 022 806
+
+              </p>
+
+              <div class="row">
+                <img src="../../../assets/icons/Icon.png" alt="" width="20%" class="mt-1">
+                <span class="text-white">{{ 'contact_us' | translate }}</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="tab-pane fade px-5" id="custom-content-above-settings" role="tabpanel"
+          aria-labelledby="custom-content-above-settings-tab">
+          <div class="row mt-5 " style="    justify-content: space-around; " *ngIf="affiche===false">
+            <div class="col-md-6 mb-5">
+              <div class="card" style=" width: 66%;">
+                <img class="card-img-top"
+                  src="../../../assets/pics/116348885_1594736947364173_4299255194225280019_o.jpg" alt="Card image cap"
+                  style="height: 12rem; ">
+                <div class="card-body">
+                  <h5 class="card-title text-center " style="margin-bottom: 2rem;">{{ 'procheque_title' | translate }}</h5>
+                  <a class="btn btn-primary" style="width: 50%;" (click)="goProCheque()">{{ 'read_article' | translate }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <div class="card" style=" width: 66%;">
+                <img class="card-img-top" src="../../../assets/pics/GettyImages-1085606706-600x370-1 (1).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{ 'asm_expansion_title' | translate }}</h5>
+
+                  <a class="btn btn-primary" style="width: 50%;" (click)="gotoASM()">{{ 'read_article' | translate }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <div class="card" style=" width: 66%;">
+                <img class="card-img-top"
+                  src="../../../assets/pics/94186341_954157811665675_4364249383387004928_n (1).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="margin-bottom: 2rem;">{{ 'software_update_title' | translate }}</h5>
+                  <a class="btn btn-primary" style="width: 50%;" (click)="gotoMise()">{{ 'read_article' | translate }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <div class="card" style=" width: 66%;">
+                <img class="card-img-top" src="../../../assets/pics/1-1.jpg" alt="Card image cap"
+                  style="height: 12rem; ">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{ 'dux_erp_update_2020' | translate }}</h5>
+                  <a class="btn btn-primary" style="width: 50%;" (click)="gotoErp()">{{ 'read_article' | translate }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5" *ngIf="affiche1===true">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <h3 style="
+                color: #001b36;
+                font-weight: 700;
+            ">{{ 'procheque_title' | translate }}</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/pics/116348885_1594736947364173_4299255194225280019_o.jpg" alt="image"
+                  style=" width: 100%; height: 75%;">
+                <p class="mt-4">{{ 'procheque_description' | translate }}
+                </p>
+              </div>
+              <div class="col-md-12">
+                <h3 style="
+                text-align: center;
+                position: relative;
+                top: -3rem;
+                color: #4bb6cf;
+                font-weight: 700;
+            "> {{ 'our_references' | translate }}</h3>
+
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-sks.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-polygarde.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/atc-60x177-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/floraison.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/TRAPP-securite.png" alt="image" style="
+                width: 9rem;  ">
+
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/ntpe-60x140-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+            </div>
+
+          </div>
+          <div class="row mt-5" *ngIf="affiche2===true">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <h3 style="
+                color: #001b36;
+                font-weight: 700;
+            ">{{ 'asm_expansion_title' | translate }}</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/pics/GettyImages-1085606706-600x370-1 (1).jpg" alt="image"
+                  style=" width: 100%; height: 75%;">
+                <p class="mt-4">{{'text'|translate}}
+                </p>
+              </div>
+              <div class="col-md-12">
+                <h3 style="
+                text-align: center;
+                position: relative;
+                top: -3rem;
+                color: #4bb6cf;
+                font-weight: 700;
+            "> {{ 'our_references' | translate }}</h3>
+
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-sks.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-polygarde.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/atc-60x177-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/floraison.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/TRAPP-securite.png" alt="image" style="
+                width: 9rem;  ">
+
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/ntpe-60x140-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+            </div>
+
+          </div>
+          <div class="row mt-5" *ngIf="affiche3===true">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <h3 style="
+                color: #001b36;
+                font-weight: 700;
+            ">{{ 'software_update_title' | translate }}</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/pics/94186341_954157811665675_4364249383387004928_n (1).jpg" alt="image"
+                  style=" width: 100%; height: 75%;">
+                <p class="mt-4">{{ 'propaie_update_description' | translate }}
+                </p>
+              </div>
+              <div class="col-md-12">
+                <h3 style="
+                text-align: center;
+                position: relative;
+                top: -3rem;
+                color: #4bb6cf;
+                font-weight: 700;
+            "> Nos Reference</h3>
+
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-sks.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-polygarde.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/atc-60x177-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/floraison.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/TRAPP-securite.png" alt="image" style="
+                width: 9rem;  ">
+
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/ntpe-60x140-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5" *ngIf="affiche4===true">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <h3 style="
+                color: #001b36;
+                font-weight: 700;
+            ">{{ 'dux_erp_update_2020' | translate }}</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/pics/1-1.jpg" alt="image" style=" width: 100%; height: 75%;">
+                <p class="mt-4">{{ 'dux_update_description' | translate }}
+                </p>
+              </div>
+              <div class="col-md-12">
+                <h3 style="
+                text-align: center;
+                position: relative;
+                top: -3rem;
+                color: #4bb6cf;
+                font-weight: 700;
+            "> {{ 'our_references' | translate }}</h3>
+
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-sks.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/reference-dux-polygarde.png" alt="image" style="
+                width: 9rem;  ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/atc-60x177-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/floraison.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/TRAPP-securite.png" alt="image" style="
+                width: 9rem;  ">
+
+              </div>
+              <div class="col  animate-fade-in">
+                <img src="../../../assets/clients/ntpe-60x140-1.png" alt="image" style="
+                width: 9rem; ">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.ABOUT_TEXT' | translate }}  </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ADDRESS' | translate }}
+          </h6>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SFAX' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_TUNIS' | translate }}
+          </p>
+          <p class="text-left pr-5">
+            {{ 'FOOTER.ADDRESS_TEXT_SOUSSE' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            {{ 'FOOTER.ABOUT' | translate }}
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.FEATURES' | translate }}
+          </p>
+          <p class="text-left pr-0 mb-0">
+            {{ 'FOOTER.MEDIATHEQUE' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.OUR_PACKS' | translate }}
+          </p>
+          <p class="text-left pr-0">
+            {{ 'FOOTER.CONTACT' | translate }}
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }}</h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">{{ 'FOOTER.NEWSLETTER' | translate }}</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">{{ 'FOOTER.NEWSLETTER_SUBSCRIBE' | translate }} </h6>
+          <div class="d-flex ">
+            <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Right -->
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+
+<!-- Footer -->
+<script src="../../../assets/dist/js/mains.js">
+
+</script>

@@ -1,0 +1,192 @@
+{
+  "FORMATION": "Formation",
+  "MEDIATHEQUE": "Médiathèque",
+  "NOS_PACKS": "Nos packs",
+  "CONTACTS": "Contact",
+  "CONNECTEZ_VOUS": "Connectez-vous",
+  "CREER_UN_COMPTE": "Créer un compte",
+  "COMPTE": "Déconnexion",
+
+  "HOME_PAGE": {
+    "WELCOME_MESSAGE": "Un ERP Tunisien Performent ,Complet",
+
+    "EASY_TO_HANDLE": "Et Facile A Manipuler!",
+    "Devis":"demande devis"
+  },
+    "CONTENT": {
+    "TITLE": "L'excellence Made in Tunisia !",
+    "DESCRIPTION": "DUX – ERP Tunisie est un progiciel de gestion intégré (ERP) qui convient à tous les secteurs d’activité. Il vous offre donc une réorganisation optimale des flux internes et externes de votre entreprise afin d’assurer une intégration parfaite et aussi d’activer un système de gestion tant efficace que performant, ce qui permet à l’entreprise de ne plus souffrir d’erreurs organisationnelles qui peuvent avoir un impact négatif sur ses finances et sur sa compétitivité.",
+    "TITLEFONCT":"Fonctionnalités DUX-ERP",
+    "DESCFONCT":"Grâce à son architecture modulaire, chaque module de Dux – ERP est un logiciel complet qui peut être utilisé d’une façon indépendante. Nos clients peuvent obtenir le pack Dux qui leur convient ou bien uniquement le(s) module(s) qu’ils souhaitent. Avec Dux – ERP, ne payez que les fonctionnalités dont vous avez besoin."
+
+  },
+  "CARDS":{
+    "LINGUES":"Langues",
+    "DEPOTS":"Dépots",
+    "DEVISES":"Devises",
+    "COMPTES":"Comptes",
+    "CAISSES":"Caisses",
+    "PLATFORME":"Platformes"
+  },
+  "CLIENTS": {
+    "TITLE": "Avis de nos clients fidèles",
+    "TESTIMONIAL_1": "Le portail DUX ERP a vraiment changé la façon dont nous gérons nos opérations. Son interface intuitive et sa convivialité ont grandement facilité la formation de notre équipe.",
+    "TESTIMONIAL_2": "En tant qu'intégrateur, je suis très satisfait de la médiathèque du portail DUX ERP. Les vidéos de démonstration sont très utiles pour comprendre les fonctionnalités complexes du système.",
+    "TESTIMONIAL_3": "Le module de gestion des formations clients de DUX ERP a considérablement simplifié notre processus de formation.",
+    "NAME_1": "Amine",
+    "NAME_2": "Mohamed",
+    "NAME_3": "Amira",
+    "STARS_1": "★★★★★",
+    "STARS_2": "★★★★★",
+    "STARS_3": "★★★★☆"
+  },
+  "TARIFFS": {
+    "TITLE": "Nos Tarifs",
+    "CHOOSE_PACK": "Choisissez le pack qui vous convient",
+    "PACK_SIMPLE": "PACK SIMPLE",
+    "PACK_STANDARD": "PACK STANDARD",
+    "PACK_ENTERPRISE": "PACK ENTREPRISE",
+    "FREE_TRIAL": "ESSAI GRATUIT",
+    "DEMAND_QUOTE": "DEMANDE DEVIS",
+    "FREE_USER":"Utilisateur Gratuit",
+    "FEATURES_SIMPLE": ["Gestion des articles", "Gestion des factures", "Gestion des clients"],
+    "FEATURES_STANDARD": ["Gestion des commissions", "Mode gestion des stocks", "Valorisation de stock", "Comparatif des offres", "Saisie des achats", "Versement", "Facturation"],
+    "FEATURES_ENTERPRISE": ["Gestion des commissions", "Mode gestion des stocks", "Tableau de bord Trésorerie", "Gestion des frais généraux", "Valorisation de stock", "Comparatif des offres", "Saisie des achats", "Versement", "Facturation"]
+  },
+  "NEWS": {
+    "TITLE": "Les actualités de DUX-ERP",
+    "DESCRIPTION": "Découvrez les dernières actualités et innovations de DUX ERP, le portail de gestion d'entreprise qui révolutionne la façon dont les organisations optimisent leurs opérations.",
+    "BUTTON_TEXT": "Voir les articles",
+    "NEWS_TITLE": "ProChèque Voit Le Jour!",
+    "NEWS_DESCRIPTION": "Le logiciel de gestion et d'impression de chèques et traites de ASM, ProChèque, voit le jour.",
+    "READ_ARTICLE": "Lire article"
+  },
+  "CONTACT": {
+    "TITLE_1": "Discutez avec un expert. Nous sommes ici pour vous aider",
+    "TITLE_2": "Contactez nos conseillers pour toute information complémentaire",
+    "PHONE": "+(216) 92 022 808",
+    "EMAIL": "sav@asm-tunisie.com"
+  },
+  "FLEXIBILITY": {
+    "TITLE": "La flexibilité de Dux-ERP",
+    "DESCRIPTION": "Dux-ERP vous garantit une flexibilité absolue permettant ainsi de s'adapter à n'importe quel workflow quelle que soit la taille de l'entreprise en Tunisie ou à l'étranger :",
+    "FEATURES": [
+      "Circuits documents de Dux-ERP",
+      "Dux-ERP est Multi-Utilisateur",
+      "Impression de documents personnalisée",
+      "Dux-ERP évolue avec votre workflow"
+    ]
+  },
+  "ASSISTANCE": {
+    "TITLE": "Demander une assistance d'un expert",
+    "FEATURES": [
+      "Choisir date et heure d'une formation",
+      "Un expert est disponible juste pour vous répondre",
+      "Réactivité et Rapidité d'intervention"
+    ],
+    "BUTTON": "Planifier maintenant"
+  },
+  "REFERENCES": {
+    "TITLE": "Nos références"
+  },
+  "FOOTER": {
+    "ABOUT": "À propos",
+    "ADDRESS": "Adresse",
+    "FEATURES": "Fonctionnalités",
+    "MEDIATHEQUE": "Médiathèque",
+    "OUR_PACKS": "Nos packs",
+    "CONTACT": "Contact",
+    "NEWSLETTER_SUBSCRIBE": "S'inscrire à la Newsletter",
+    "NEWSLETTER": "S'inscrire",
+    "EMAIL_PLACEHOLDER": "Entrez votre adresse e-mail",
+    "SUBSCRIBE": "S'abonner",
+    "ABOUT_TEXT": "DUX est un progiciel de gestion intégré (ERP) qui convient à tous les secteurs d’activité",
+    "ADDRESS_TEXT_SFAX": "Sfax (Siège): Avenue de la Liberté, Imm. El Itkane, 3ème étage, B11 3027, Sfax",
+    "ADDRESS_TEXT_TUNIS": "Tunis: 7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053",
+    "ADDRESS_TEXT_SOUSSE": "Sousse: Av Yasser Arafat, Résidence Chaima, 4ème étage App. 401 Sahloul, Sousse",
+    "FOLLOW_US": "Suivez-nous sur"
+  },
+  "breadcrumb": {
+    "date_heure": "Date & heure",
+    "details": "Détails",
+    "reserve": "Réservé"
+  },
+  "CONTEXT_FORMATION":{
+    "DETAILFORM":"Details de la réunion",
+    "TITRE_FORMATION":"Formation avec un expert",
+    "DESCRIPTION_FORMATION":"Formation avec un expert",
+    "DESCRIPTION":"Description",
+    "selectDateTime": "Sélectionner une date & une heure"
+
+  },
+  "meeting_schedule": {
+    "paragraph": "Planifiez une réunion gratuite d'une heure avec un expert, pour obtenir :",
+    "items": [
+      "une démonstration sur mesure",
+      "des recommandations basées sur vos besoins",
+      "des réponses à vos questions sur Dux",
+      "des informations sur les prix et la méthodologie"
+    ]
+  },
+  "FORM_LABELS": {
+    "addInfo": "Ajouter plus d'information sur vous",
+    "nom": "Nom complet",
+    "email": "Email",
+    "telephone": "Numéro de téléphone",
+    "nomSocite": "Nom de la société",
+    "secteurActivite": "Votre secteur d'activité",
+    "description": "Description",
+    "organisez": "Pour qui organisez-vous votre rendez-vous?"
+  },
+  "BUTTON_LABELS": {
+    "confirmAppointment": "Confirmer le rendez-vous"
+  },
+  "PLACEHOLDERS": {
+    "nom": "Entrez votre nom complet",
+    "email": "Entrez votre email",
+    "telephone": "Entrez votre numéro de téléphone",
+    "nomSocite": "Entrez le nom de votre société",
+    "secteurActivite": "Entrez votre secteur d'activité",
+    "description": "Entrez une description",
+    "organisez": "Sélectionnez une option"
+  },
+    "DETAILS_SECTION": {
+    "dateTimeLabel": "Date & heure",
+    "durationLabel": "Durée",
+    "locationLabel": "Emplacement",
+    "participantsLabel": "Participants",
+    "detailsLabel": "Détails",
+    "phoneNumber": "téléphone",
+    "email": "Email",
+    "companyName": "nom de la sociéte",
+    "businessSector": "Votre secteur d'activité",
+    "describeNeeds": "Décrivez vos besoins",
+    "directionMessage": "Message de la direction",
+    "congratulationMessage": "Félicitation! votre rendez-vous est pris. Avant la réunion, vous recevrez un lien de conférence téléphonique par mail. Jusqu'à une heure avant la réunion, vous avez le choix d'annuler ou de reprogrammer la réunion",
+    "cancelRescheduleButton": "Annuler/reprogrammer"
+  },
+  "knowledge_world": "Le monde de la connaissance :",
+  "tutorial_demo": "Tutoriel et démonstration pratique",
+  "Actualite":"Actualité",
+  "Module":"Module Dux",
+  "need_assistance": "Besoin d'une assistance avec un",
+  "expert": "EXPERT",
+  "apply_now": "Postuler maintenant",
+  "contact_us": "Contactez-nous",
+  "procheque_title": "ProChèque Voit Le Jour",
+  "read_article": "Lire l'article",
+  "software_update_title": "Mise À Jour Du Logiciel ProPaie",
+  "asm_expansion_title": "L'ASM Poursuit Son Expansion, Et Dux-ERP Son Évolution !",
+  "dux_erp_update_2020": "Mise À Jour De L’ERP Dux, La Version 2020",
+  "procheque_description": "Le logiciel de gestion et d’impression de chèques et traites de ASM, ProChèque, voit le jour. Muni d’un module de réglages d’impression compatible avec les modèles de chèques de toutes les banques disponibles, il permet d’imprimer des chèques lisibles et 100% fiables.",
+  "our_references": "Nos Références",
+  "dux_update_description": "Une mise à jour drastique de l'ERP Dux, version 2020! Avec encore plus de correctifs, de fonctionnalités, Dux est plus rapide et plus stable que jamais. Une nouvelle interface conviviale et des menus réorganisés pour un flux de travail plus fluide.",
+  "propaie_update_description": "Notre logiciel de paie, ProPaie, a été mis à jour pour faciliter le calcul de la contribution provisoire et exceptionnelle de l'année 2020 au profit du budget de l'État. Grâce à ProPaie, cette contribution exceptionnelle sera calculée automatiquement en fonction de la base du revenu annuel net ou de la pension annuelle nette déterminée après déductions.",
+  "text": "Dux-ERP continue son évolution ! ASM poursuit l'expansion de ses locaux et de son effectif ! Avec plus de bureaux et d'ingénieurs en développement, de spécialistes commerciaux et d'intégrateurs ERP, notre entreprise est aussi prête que jamais à répondre aux besoins de sa clientèle croissante. ASM est plus prête que jamais à conquérir le marché des ERP en Tunisie. Dux-ERP compte désormais plus de soldats dignes de son poids. ASM recrute plus de 15 nouveaux employés expérimentés dans divers domaines, ouvre de nouveaux bureaux et intègre de nouvelles options technologiques innovantes."
+
+
+
+
+
+
+}

@@ -1,0 +1,427 @@
+<section class="head">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-md-3">
+          <div class="d-flex justify-content-center">
+            <img class="pt-2" src="assets/unnamed (1).png" width="25%">
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <ul class="navbar-nav mr-auto justify-content-center pt-3 align-items-center">
+            <li class="nav-item">
+                   <a class="nav-link" [routerLink]="'/dateformation'">{{ 'FORMATION' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="'/mediatheque'">{{ 'MEDIATHEQUE' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  style="color: #4bb6cf;
+              border-bottom: 3px solid;
+              font-weight: 600;" [routerLink]="'/pack'">{{ 'NOS_PACKS' | translate }}</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" [routerLink]="'/contact'">{{ 'CONTACTS' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 text-center pt-3 d-flex align-items-center">
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-connect btn-sm mt-0 mr-4" [routerLink]="'/login'" >{{ 'CONNECTEZ_VOUS' | translate }}</button>
+          <button *ngIf="affiche===false"  type="button" class="btn  btn-creer btn-sm mt-0" [routerLink]="'/registre'" >{{ 'CREER_UN_COMPTE' | translate }}</button>
+          <button *ngIf="affiche===true" type="button" class="btn  btn-creer btn-sm mt-0"(click)="deconection()" >{{ 'COMPTE' | translate }}</button>
+
+ <div class="dropdown">
+   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img [src]="currentFlag" alt="Current Language" width="20px">
+   </button>
+   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item" (click)="changeLanguage('fr')">
+       <img src="assets/flags/fr.png" alt="Français" width="20px">
+     </a>
+     <a class="dropdown-item" (click)="changeLanguage('en')">
+       <img src="assets/flags/gb.png" alt="English" width="20px">
+     </a>
+     <!-- Ajoutez d'autres langues ici -->
+   </div>
+ </div>
+
+         </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+<section class="mb-5">
+  <div class="container mt-5">
+    <div class="row justify-content-center mb-4">
+      <h4 class="titre-pack">Découvrez <span style="color:#4bb6cf">nos packs</span> exclusifs qui répondent a tous <span style="color:#4bb6cf">vos besoins</span> </h4>
+
+    </div>
+    <div class="row justify-content-center mb-0">
+      <h2 style="color:#022347">{{ 'TARIFFS.TITLE' | translate }}</h2>
+
+    </div>
+    <div class="row justify-content-center mb-5 ">
+    <h4 style="font-size: 20px; color: grey;"> {{ 'TARIFFS.CHOOSE_PACK' | translate }}</h4>
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3 mr-4">
+          <div class="pricing-card">
+              <h4 class="mt-1 ml-2" style="color:#1f7a8f;font-weight: 600;">{{ 'TARIFFS.PACK_SIMPLE' | translate }}</h4>
+              <p style="  font-size: 13px; " class="ml-2">+1 {{ 'TARIFFS.FREE_USER' | translate }}</p>
+              <div class="price">10 DT/mois</div>
+              <ul>
+                <li *ngFor="let feature of 'TARIFFS.FEATURES_SIMPLE' | translate">{{ feature }}</li>
+              </ul>
+              <div class="d-flex justify-content-center">
+                <button class="btn" style="margin-top: 13rem;" (click)="openmodel()">{{ 'TARIFFS.FREE_TRIAL' | translate }}</button>
+
+               </div>
+          </div>
+      </div>
+      <div class="col-md-3 mr-4">
+          <div class="pricing-card">
+              <h4 style="color:#1f7a8f;font-weight: 600;">{{ 'TARIFFS.PACK_STANDARD' | translate }}</h4>
+              <p style="
+              font-size: 13px; ">+1 {{ 'TARIFFS.FREE_USER' | translate }}</p>
+              <div class="price">35 DT/mois</div>
+              <ul>
+                <li *ngFor="let feature of 'TARIFFS.FEATURES_STANDARD' | translate">{{ feature }}</li>
+              </ul>
+              <div class="d-flex justify-content-center">
+                <button class="btn" style="margin-top:5.5rem ;" (click)="openmodel()">{{ 'TARIFFS.FREE_TRIAL' | translate }}</button>
+               </div>
+
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="pricing-card featured">
+              <h4 style="margin-bottom: 2.75rem; font-weight: 600;">{{ 'TARIFFS.PACK_ENTERPRISE' | translate }}</h4>
+              <p ></p>
+              <div class="price">Sur commande</div>
+              <ul>
+                <li *ngFor="let feature of 'TARIFFS.FEATURES_ENTERPRISE' | translate">{{ feature }}</li>
+
+              </ul>
+             <div class="d-flex justify-content-center">
+              <button class="btn2" [routerLink]="'/devis'">{{ 'TARIFFS.DEMAND_QUOTE' | translate }}</button>
+             </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+<section style="background-color:#f8f9fa ;">
+  <div class="container">
+    <div class="row justify-content-center pt-4">
+      <h2 style="color:#022347"> Nos Modules</h2>
+    </div>
+
+
+    <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="row mt-4 mb-5">
+        <div class="col-md-3">
+          <div class="feature-card">
+              <div class="icon">
+                <p class="titre_module">Module</p>
+                <p class="soustitre_module">Dux GPAO</p>
+                <p class="description_module">Compréhension et contrôle efficaces des caractéristiques
+                   techniques des articles, calcul précis des besoins nets,
+                    prise en compte stricte des contraintes de fabrication,
+                     planification et suivi systématiques des ordres de production,
+                      contrôle optimal des échantillons de matières premières
+                   et évaluation minutieuse des coûts...</p>
+
+
+
+          </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="feature-card">
+            <div class="icon">
+              <p class="titre_module">Module</p>
+              <p class="soustitre_module">Comptabilité</p>
+              <p class="description_module">
+                Les avantages d'un processus comptable simplifié comprennent le lettrage des documents,
+                 la création automatique de documents comptables et la personnalisation de l'affichage
+                 du plan comptable.</p>
+
+
+
+        </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-card">
+          <div class="icon">
+            <p class="titre_module">Module</p>
+            <p class="soustitre_module">GMAO</p>
+            <p class="description_module">
+              une gestion complète des équipements,
+               y compris la maintenance préventive et corrective,
+                la gestion des pièces de rechange et la planification des interventions.
+                La gestion des contrats et des assurances, ainsi que le suivi des performances à
+                l'aide de rapports et de tableaux de bord, font partie de cette gestion...</p>
+
+
+
+      </div>
+     </div>
+    </div>
+    <div class="col-md-3">
+        <div class="feature-card">
+          <div class="icon">
+            <p class="titre_module">Module</p>
+            <p class="soustitre_module">Dux CRM</p>
+            <p class="description_module">
+              Les principales fonctionnalités d'un système de gestion client sont le module
+               de prospection pour attirer de nouveaux clients,
+                la gestion des réclamations pour garantir que les clients existants sont satisfaits
+                et la réalisation d'enquêtes pour évaluer leur niveau de satisfaction.</p>
+
+
+
+      </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="feature-card">
+        <div class="icon">
+          <p class="titre_module">Module</p>
+          <p class="soustitre_module">Dux Pointage</p>
+          <p class="description_module">Les éléments essentiels d'un système de gestion du personnel
+             sont la gestion des présences pour suivre les heures travaillées, la gestion des congés
+              pour planifier les absences, la gestion des plannings pour organiser les horaires
+            et la gestion des pointeuses pour enregistrer les arrivées et les départs du personnel.</p>
+
+
+
+    </div>
+      </div>
+  </div>
+  <div class="col-md-3">
+      <div class="feature-card">
+        <div class="icon">
+          <p class="titre_module">Module</p>
+          <p class="soustitre_module">Dux Paie</p>
+          <p class="description_module">Les principales fonctions d'un système de gestion du personnel
+            sont la gestion des effectifs, la création d'états de paiement,
+             l'importation de données depuis une ou plusieurs sources pour suivre les heures travaillées et
+             la préparation des déclarations fiscales et sociales liées aux charges salariales.</p>
+
+
+
+    </div>
+      </div>
+  </div>
+  <div class="col-md-3">
+    <div class="feature-card">
+      <div class="icon">
+        <p class="titre_module">Module</p>
+        <p class="soustitre_module">Dux Immobilisation</p>
+        <p class="description_module">Un système de gestion des clients comprend un module de prospection
+          pour attirer de nouveaux clients,
+           un module de gestion des réclamations pour répondre aux besoins
+           et préoccupations des clients existants et un module d'enquêtes
+           de satisfaction pour évaluer leur niveau de satisfaction.</p>
+
+
+
+  </div>
+    </div>
+</div>
+<div class="col-md-3">
+  <div class="feature-card">
+    <div class="icon">
+      <p class="titre_module">Module</p>
+      <p class="soustitre_module">Dux Décisionnel</p>
+      <p class="description_module">Les principales fonctionnalités d'un système de gestion
+         des ressources humaines sont la gestion du personnel, la création d'états de paiement,
+          l'importation de données à partir d'une ou plusieurs pointeuses pour suivre les heures de travail
+         et la préparation des déclarations de charges sociales et fiscales.</p>
+
+
+
+</div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  </div>
+</section>
+<section class="mt-5 section4">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6">
+        <div class="flexibility-content">
+          <h4 style="font-size: 2.5rem; color: #ffffff; font-weight: 600;">{{ 'ASSISTANCE.TITLE' | translate }}</h4>
+          <div class="checklist-item mb-4" *ngFor="let feature of 'ASSISTANCE.FEATURES' | translate">
+            <i class="fa fa-check-square mr-2" style="font-size: 1.5rem; color: #00bfff;"></i>
+            <span style="color: white;">{{ feature }}</span>
+          </div>
+          <button class="btn btn-creer btn-sm pt-1 pb-1" [routerLink]="'/dateformation'">{{ 'ASSISTANCE.BUTTON' | translate }}</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="flexibility-image">
+          <img src="assets/pics/pngegg.png" alt="Dux-ERP Dashboard" width="75%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-5">
+  <div class="container">
+    <div class="row justify-content-center mt-5 mb-5">
+      <h2 style="color:#022347">{{ 'REFERENCES.TITLE' | translate }}</h2>
+    </div>
+    <div class="row align-items-center">
+      <div class="col animate-fade-in">
+        <img src="/assets/clients/reference-dux-sks.png" alt="image" style="width: 8rem;">
+      </div>
+      <div class="col animate-fade-in">
+        <img src="/assets/clients/reference-dux-polygarde.png" alt="image" style="width: 8rem;">
+      </div>
+      <div class="col animate-fade-in">
+        <img src="/assets/clients/atc-60x177-1.png" alt="image" style="width: 8rem;">
+      </div>
+      <div class="col animate-fade-in">
+        <img src="/assets/clients/floraison.png" alt="image" style="width: 8rem;">
+      </div>
+      <div class="col animate-fade-in">
+        <img src="/assets/clients/TRAPP-securite.png" alt="image" style="width: 8rem;">
+      </div>
+      <div class="col animate-fade-in">
+        <img src="/assets/clients/ntpe-60x140-1.png" alt="image" style="width: 8rem;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center text-lg-start bg-body-tertiary text-white" style="
+background-color: #001b36;
+">
+  <!-- Section: Social media -->
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3 pt-5">
+        <div class="col-md-3">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 text-left">
+            <img _ngcontent-ng-c2873429629="" src="../../../assets/unnamed.png" alt="" width="40%">
+          </h6>
+
+        </div>
+      </div>
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2 mr-4">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold mb-4" style="font-weight: 800;">
+            A propos
+          </h6>
+          <p class="text-left pr-0">
+            DUX est un progiciel de gestion intégré (ERP) qui convient à tous les secteurs d’activité
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-4 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            Adress
+          </h6>
+          <p class="text-left pr-5">
+            Sfax (Siège): Avenue de la Liberté, Imm. El Itkane, 3ème étage, B11 3027, Sfax
+          </p>
+          <p class="text-left pr-5">
+            Tunis: 7, rue du Lac Côme, Imm. Nessima, 1er étage, App 1, 2 et 3 Et Les Berges du Lac, 1053
+          </p>
+          <p class="text-left pr-5">
+            Sousse: Av Yasser Arafat, Résidence Chaima, 4ème étage App. 401 Sahloul, Sousse
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2  mb-2">
+          <!-- Content -->
+          <h6 class="text-uppercase text-left  fw-bold " style="font-weight: 800;">
+            A propos
+          </h6>
+          <p class="text-left pr-0 mb-0">
+            Fonctionnalités
+          </p>
+          <p class="text-left pr-0 mb-0">
+            Mediathéque
+          </p>
+          <p class="text-left pr-0 mb-0">
+            Nos packs
+          </p>
+          <p class="text-left pr-0">
+            Contact
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold  text-left" style="font-weight: 800;">S'inscrire aiw Newslettre </h6>
+          <div class="d-flex">
+            <input type="text" name="input" class="form-control text" placeholder="Entrer votre Email">
+            <button type="submit" class="btn btn-info  register">S'inscrire</button>
+
+          </div>
+          <h6 class="text-uppercase fw-bold  text-left mt-5" style="font-weight: 800;">S'inscrire aiw Newslettre </h6>
+          <div class="d-flex ">
+            <!-- Left -->
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+
+            <a href="" class="me-4 text-reset mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Right -->
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
